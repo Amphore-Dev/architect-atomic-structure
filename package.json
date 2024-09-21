@@ -1,0 +1,24 @@
+{
+    "name": "@amphore-dev/architect-atomic-structure",
+    "version": "1.0.0",
+    "description": "Atomic structure plugin for Architect CLI",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/amphore-dev/architect-atomic-structure.git"
+    },
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "tsc"
+    },
+    "keywords": [
+        "architect",
+        "plugin",
+        "cli",
+        "atomic",
+        "structure",
+        "design",
+        "pattern"
+    ],
+    "author": "Amphore Dev <contact@amphore.dev>",
+    "license": "ISC"
+}
