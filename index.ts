@@ -1,23 +1,56 @@
-import { TArchitectPlugin } from "@amphore-dev/architect";
+const ArchitectPlugin = {
+    name: "architect-atomic-structure",
 
-const ArchitectPlugin: TArchitectPlugin = {
-    name: "architect-plugin",
-    register(architect) {
-        architect.registerBlueprints(
-            "<path/in/architect/blueprints>",
-            "./blueprints"
-        );
-
-        architect.registerBuilders(
-            "<path/in/architect/builders>",
-            "./builders"
-        );
-
-        // Optionally, register new commands for Architect CLI
-        architect.registerCommand("command-name", (args) => {
-            console.log("Command imported from plugin with args:", args);
-        });
+    config: {
+        defaultStructureItem: {
+            caseFormat: "pascal",
+        },
+        structure: {
+            components: {
+                generateIndex: true,
+                generateSubIndex: true,
+                subdirs: {
+                    atoms: "atom",
+                    molecules: "molecule",
+                    organisms: "organism",
+                    templates: "template",
+                },
+                type: "component",
+            },
+            constants: {
+                caseFormat: {
+                    name: "snake-upper",
+                },
+                generateIndex: true,
+                prefix: "C",
+                type: "constant",
+            },
+            hooks: {
+                generateIndex: true,
+                prefix: "use",
+                type: "hook",
+            },
+            services: {
+                generateIndex: true,
+                suffix: "Service",
+                type: "service",
+            },
+            types: {
+                generateIndex: true,
+                prefix: "T",
+                type: "type",
+            },
+            utils: {
+                generateIndex: true,
+                prefix: "U",
+                type: "util",
+            },
+            views: {
+                generateIndex: true,
+                generateSubdirs: true,
+                type: "view",
+            },
+        },
     },
 };
-
 export default ArchitectPlugin;

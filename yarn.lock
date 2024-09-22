@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-"@amphore-dev/architect@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@amphore-dev/architect/-/architect-1.0.0.tgz#e286adf81a397ea0ce5fc7f3aa69c565aae73c0f"
-  integrity sha512-y+QFGOQn9zhoR/018UlMaBLb4Do89k5evp7sOwMjMlk9fzc2gQ1NOjgfuX+OVWgIKHhsM4ahn+TtBohrZlbklA==
+"@amphore-dev/architect@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@amphore-dev/architect/-/architect-1.2.0.tgz#196fd359fc35698e06e72838bcc383a60cc2e77e"
+  integrity sha512-RXMfUZhE8FdclHENnRxwRGz21ISruyKdD8wyGUTbBgokHlfPH5Mq5OsZl7YiiWb3uzr69+wTil971fLFsqXNFw==
   dependencies:
     commander "^12.1.0"
     esbuild "^0.23.1"
