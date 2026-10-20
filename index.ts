@@ -1,4 +1,7 @@
-const ArchitectPlugin = {
+import type { TArchitectPlugin } from "@amphore-dev/architect";
+
+// Structure only: compatible with any language plugin (react, vue, php...)
+const ArchitectPlugin: TArchitectPlugin = {
     name: "architect-atomic-structure",
     config: {
         structure: {

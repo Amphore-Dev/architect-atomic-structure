@@ -1,0 +1,25 @@
+name: 🧪 Run Tests
+
+on:
+    pull_request:
+    push:
+        branches: [main]
+    # called by the publish workflow before publishing
+    workflow_call:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v7
+            # corepack before setup-node, so its yarn cache uses yarn 4
+            - run: corepack enable
+            - uses: actions/setup-node@v7
+              with:
+                  node-version: "22.x"
+                  cache: "yarn"
+            - run: corepack enable
+            - run: yarn install --immutable
+            # typecheck + build (the plugin is typed with Architect's types)
+            - run: yarn build
+            - run: npm pack --dry-run
