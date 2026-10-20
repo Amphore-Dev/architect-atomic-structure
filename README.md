@@ -4,11 +4,20 @@ The **architect-atomic-structure** plugin extends the [Architect CLI tool](https
 
 ## Features
 
--   Follows the atomic design principle with support for Atoms, Molecules, Organisms, and Templates.
--   Organizes pages, utilities, constants, types, hooks, and services into their own directories.
--   Automatic generation of index files and sub-index files for easy imports.
--   Customizable directory and naming conventions, including prefixes, suffixes, and case formats.
--   Seamless integration with the Architect CLI for efficient project scaffolding.
+- Follows the atomic design principle with support for Atoms, Molecules, Organisms, and Templates.
+- Organizes pages, utilities, constants, types, hooks, and services into their own directories.
+- Automatic generation of index files and sub-index files for easy imports.
+- Customizable directory and naming conventions, including prefixes, suffixes, and case formats.
+- Seamless integration with the Architect CLI for efficient project scaffolding.
+
+## Language plugins
+
+This plugin only defines the folders structure (folders, types, prefixes, suffixes, case formats, indexes).
+The generated files come from the language plugin, so it works with any of them:
+[@amphore-dev/architect-plugin-react](https://www.npmjs.com/package/@amphore-dev/architect-plugin-react), or a Vue, PHP... plugin.
+
+A language plugin provides its blueprints by folder name (`components`, `pages`, `hooks`, `types`...) or by type (`atom`, `page`...).
+The options of the structure can be overridden in your `architect.config.json` (e.g. a different prefix for the types).
 
 ## Atomic Structure Breakdown
 
@@ -45,8 +54,8 @@ To include the plugin, modify the `architect.config.json` file in your project d
 
 ```json
 {
-    "plugins": ["@amphore-dev/architect-atomic-structure"],
-    "outputDir": "src"
+  "plugins": ["@amphore-dev/architect-atomic-structure"],
+  "outputDir": "src"
 }
 ```
 

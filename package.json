@@ -1,6 +1,6 @@
 {
     "name": "@amphore-dev/architect-atomic-structure",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Atomic structure plugin for Architect CLI",
     "repository": {
         "type": "git",
@@ -20,5 +20,16 @@
         "pattern"
     ],
     "author": "Amphore Dev <contact@amphore.dev>",
-    "license": "ISC"
+    "license": "ISC",
+    "files": [
+        "dist"
+    ],
+    "peerDependencies": {
+        "@amphore-dev/architect": ">=1.3.0"
+    },
+    "devDependencies": {
+        "@amphore-dev/architect": "^2.0.0",
+        "typescript": "~6.0.3"
+    },
+    "packageManager": "yarn@4.14.1"
 }
