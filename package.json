@@ -4,7 +4,7 @@
     "description": "Atomic structure plugin for Architect CLI",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/amphore-dev/architect-atomic-structure.git"
+        "url": "git+https://github.com/Amphore-Dev/architect-atomic-structure.git"
     },
     "main": "dist/index.js",
     "scripts": {
